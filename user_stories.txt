@@ -1,0 +1,9 @@
+As a player, I want to see the weather each day so that I can predict lemonade demand.
+
+As a player, I want to see the current prices of supplies so that I can decide what to buy.
+
+As a player, I want to buy cups, ice, lemons, and sugar so that I can make lemonade.
+
+As a player, I want to see how many cups of lemonade were sold so that I can track my daily sales.
+
+As a player, I want to see my remaining inventory and cash balance so that I can plan for the next day.
