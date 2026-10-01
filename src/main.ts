@@ -109,26 +109,37 @@ function askQuestion(question: string): Promise<string> {
 async function main() {
   const stand = new LemonadeStand();
 
-  const weather = stand.getWeather();
-  const prices = stand.getPrices();
+  for (let day = 1; day <= 5; day++) {
+    console.log();
+    console.log(`===== Day ${day} =====`);
 
-  console.log(`Today's temperature: ${weather}°F`);
-  console.log("Supply prices:");
-  console.log(`Cup: $${prices.cup.toFixed(2)}`);
-  console.log(`Ice: $${prices.ice.toFixed(2)}`);
-  console.log(`Lemon: $${prices.lemon.toFixed(2)}`);
-  console.log(`Sugar: $${prices.sugar.toFixed(2)}`);
+    const weather = stand.getWeather();
+    const prices = stand.getPrices();
 
-  const cups = Number(await askQuestion("How many cups do you want to buy? "));
-  const ice = Number(await askQuestion("How much ice do you want to buy? "));
-  const lemons = Number(await askQuestion("How many lemons do you want to buy? "));
-  const sugar = Number(await askQuestion("How much sugar do you want to buy? "));
+    console.log(`Today's temperature: ${weather}°F`);
+    console.log("Supply prices:");
+    console.log(`Cup: $${prices.cup.toFixed(2)}`);
+    console.log(`Ice: $${prices.ice.toFixed(2)}`);
+    console.log(`Lemon: $${prices.lemon.toFixed(2)}`);
+    console.log(`Sugar: $${prices.sugar.toFixed(2)}`);
 
-  stand.buySupplies(cups, ice, lemons, sugar, prices);
+    const cups = Number(await askQuestion("How many cups do you want to buy? "));
+    const ice = Number(await askQuestion("How much ice do you want to buy? "));
+    const lemons = Number(await askQuestion("How many lemons do you want to buy? "));
+    const sugar = Number(await askQuestion("How much sugar do you want to buy? "));
 
-  stand.sellLemonade(weather);
+    stand.buySupplies(cups, ice, lemons, sugar, prices);
+
+    stand.sellLemonade(weather);
+
+    console.log();
+    console.log("End of day status:");
+    stand.showStatus();
+  }
 
   console.log();
+  console.log("===== Game Over =====");
+  console.log("Final status:");
   stand.showStatus();
 
   rl.close();
