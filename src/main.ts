@@ -106,6 +106,19 @@ function askQuestion(question: string): Promise<string> {
   });
 }
 
+async function askNumber(question: string): Promise<number> {
+  while (true) {
+    const answer = await askQuestion(question);
+    const value = Number(answer);
+
+    if (Number.isFinite(value) && value >= 0 && Number.isInteger(value)) {
+      return value;
+    }
+
+    console.log("Please enter a non-negative whole number.");
+  }
+}
+
 async function main() {
   const stand = new LemonadeStand();
 
@@ -123,10 +136,10 @@ async function main() {
     console.log(`Lemon: $${prices.lemon.toFixed(2)}`);
     console.log(`Sugar: $${prices.sugar.toFixed(2)}`);
 
-    const cups = Number(await askQuestion("How many cups do you want to buy? "));
-    const ice = Number(await askQuestion("How much ice do you want to buy? "));
-    const lemons = Number(await askQuestion("How many lemons do you want to buy? "));
-    const sugar = Number(await askQuestion("How much sugar do you want to buy? "));
+    const cups = await askNumber("How many cups do you want to buy? ");
+    const ice = await askNumber("How much ice do you want to buy? ");
+    const lemons = await askNumber("How many lemons do you want to buy? ");
+    const sugar = await askNumber("How much sugar do you want to buy? ");
 
     stand.buySupplies(cups, ice, lemons, sugar, prices);
 
