@@ -64,6 +64,35 @@ class LemonadeStand {
 
     console.log(`You spent $${totalCost.toFixed(2)}.`);
   }
+
+  sellLemonade(weather: number) {
+    const salePrice = 1.5;
+
+    const demand =
+      Math.floor((weather - 50) / 10) +
+      Math.floor(Math.random() * 3);
+
+    const possibleCups = Math.min(
+      this.cups,
+      this.ice,
+      this.lemons,
+      this.sugar
+    );
+
+    const cupsSold = Math.min(demand, possibleCups);
+
+    this.cups -= cupsSold;
+    this.ice -= cupsSold;
+    this.lemons -= cupsSold;
+    this.sugar -= cupsSold;
+
+    const revenue = cupsSold * salePrice;
+    this.cash += revenue;
+
+    console.log();
+    console.log(`You sold ${cupsSold} cups of lemonade.`);
+    console.log(`Revenue: $${revenue.toFixed(2)}`);
+  }
 }
 
 const rl = readline.createInterface({
@@ -96,6 +125,8 @@ async function main() {
   const sugar = Number(await askQuestion("How much sugar do you want to buy? "));
 
   stand.buySupplies(cups, ice, lemons, sugar, prices);
+
+  stand.sellLemonade(weather);
 
   console.log();
   stand.showStatus();
