@@ -5,6 +5,7 @@
     "resolveJsonModule": true,
     "allowJs": true,
     "esModuleInterop": true,
-    "isolatedModules": true
+    "isolatedModules": true, 
+    "types": ["node"]
   }
 }
