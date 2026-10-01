@@ -1,0 +1,126 @@
+===== Day 1 =====
+Today's temperature: 70°F
+Supply prices:
+Cup: $0.06
+Ice: $0.15
+Lemon: $0.22
+Sugar: $0.18
+How many cups do you want to buy? -1
+Please enter a non-negative whole number.
+How many cups do you want to buy? ads
+Please enter a non-negative whole number.
+How many cups do you want to buy? 12
+How much ice do you want to buy? 12
+How many lemons do you want to buy? 12
+How much sugar do you want to buy? 12
+You spent $7.32.
+
+You sold 3 cups of lemonade.
+Revenue: $4.50
+
+End of day status:
+Cash: $17.18
+Cups: 9
+Ice: 9
+Lemons: 9
+Sugar: 9
+
+===== Day 2 =====
+Today's temperature: 100°F
+Supply prices:
+Cup: $0.06
+Ice: $0.13
+Lemon: $0.28
+Sugar: $0.28
+How many cups do you want to buy? 0
+How much ice do you want to buy? 0
+How many lemons do you want to buy? 0
+How much sugar do you want to buy? 0
+You spent $0.00.
+
+You sold 6 cups of lemonade.
+Revenue: $9.00
+
+End of day status:
+Cash: $26.18
+Cups: 3
+Ice: 3
+Lemons: 3
+Sugar: 3
+
+===== Day 3 =====
+Today's temperature: 100°F
+Supply prices:
+Cup: $0.09
+Ice: $0.10
+Lemon: $0.29
+Sugar: $0.26
+How many cups do you want to buy? 4
+How much ice do you want to buy? 4
+How many lemons do you want to buy? 4
+How much sugar do you want to buy? 4
+You spent $2.96.
+
+You sold 7 cups of lemonade.
+Revenue: $10.50
+
+End of day status:
+Cash: $33.72
+Cups: 0
+Ice: 0
+Lemons: 0
+Sugar: 0
+
+===== Day 4 =====
+Today's temperature: 60°F
+Supply prices:
+Cup: $0.07
+Ice: $0.10
+Lemon: $0.38
+Sugar: $0.18
+How many cups do you want to buy? 3
+How much ice do you want to buy? 3
+How many lemons do you want to buy? 3
+How much sugar do you want to buy? 3
+You spent $2.19.
+
+You sold 3 cups of lemonade.
+Revenue: $4.50
+
+End of day status:
+Cash: $36.03
+Cups: 0
+Ice: 0
+Lemons: 0
+Sugar: 0
+
+===== Day 5 =====
+Today's temperature: 80°F
+Supply prices:
+Cup: $0.06
+Ice: $0.17
+Lemon: $0.35
+Sugar: $0.26
+How many cups do you want to buy? 3
+How much ice do you want to buy? 3
+How many lemons do you want to buy? 5
+How much sugar do you want to buy? 5
+You spent $3.74.
+
+You sold 3 cups of lemonade.
+Revenue: $4.50
+
+End of day status:
+Cash: $36.79
+Cups: 0
+Ice: 0
+Lemons: 2
+Sugar: 2
+
+===== Game Over =====
+Final status:
+Cash: $36.79
+Cups: 0
+Ice: 0
+Lemons: 2
+Sugar: 2
